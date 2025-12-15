@@ -3,7 +3,9 @@ pipeline{
     agent any
     stages{
         stage('Greeting'){
-            greetUser('Learner')
+            steps{
+                greetUser('Learner')
+            }
         }
         stage('Build Info'){
             steps{
@@ -12,10 +14,5 @@ pipeline{
                 }
             }
         }
-    }
-
-
-
-
-
+    }    
 }
